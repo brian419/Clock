@@ -8,16 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var action: Int? = 0
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: ClockView().navigationBarBackButtonHidden(), tag: 1, selection: $action) {
+                    EmptyView()
+                }
+                    .opacity(0)
+                Spacer()
+                Text("Welcome to Clock")
+                    .font(.custom("Times", size: 35))
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                Spacer()
+                
+                Button("Touch to Start") {
+                    self.action = 1
+                }
+                .padding()
+                .foregroundColor(.white)
+                .font(.custom("Times", size: 20))
+                
+                Spacer()
+                
+            }
+            .padding()
+        .background(.black)
         }
-        .padding()
+        
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
