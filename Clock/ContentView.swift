@@ -12,14 +12,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: ClockView().navigationBarBackButtonHidden(), tag: 1, selection: $action) {
+                NavigationLink(destination: ClockView(counter: 0).navigationBarBackButtonHidden(), tag: 1, selection: $action) {
                     EmptyView()
                 }
                     .opacity(0)
                 Spacer()
                 Text("Welcome to Clock")
                     .font(.custom("Times", size: 35))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 Spacer()
@@ -28,14 +28,14 @@ struct ContentView: View {
                     self.action = 1
                 }
                 .padding()
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .font(.custom("Times", size: 20))
                 
                 Spacer()
                 
             }
             .padding()
-        .background(.black)
+        .background(.white)
         }
         
     }

@@ -4,26 +4,37 @@
 //
 //  Created by Brian Son on 12/9/22.
 //
-
 import SwiftUI
-
+import Combine
 struct ClockView: View {
     @State var action : Int? = 0
+    @State var counter : Int = 0
+    @State private var items = [Int]()
+
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 NavigationLink(destination: ContentView().navigationBarBackButtonHidden(), tag: 2, selection: $action) {
                     EmptyView()
                 }
-                    .opacity(0)
-                Text("Placeholder")
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .font(.custom( "Times", size: 30))
-                    
+                .opacity(0)
+                Spacer()
+                Text("Press Add to add a new alarm!")
+                List {
+                    ForEach(items, id: \.self) { item in
+                        Text("Row \(item)")
+                    }
+//                    .padding()
+//                    .listRowBackground(Color.black)
+//                    .foregroundColor(Color.white)
+//                    .font(.custom( "Times", size: 15))
+//                    .frame(maxWidth: .infinity)
+                }
+
             }
-            .padding()
-            .background(.black)
+            
+            .background(.white)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Back") {
@@ -34,12 +45,13 @@ struct ClockView: View {
             }
             .toolbar {
                 ToolbarItem() {
-                    Button("Done") {
-                        
+                    Button("Add") {
+                        self.items.append(self.items.count + 1)
                     }
                     //.foregroundColor(.white)
                 }
-        }
+            }
+            
         }
     }
 }
@@ -47,6 +59,6 @@ struct ClockView: View {
 
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
-        ClockView()
+        ClockView(counter: 0)
     }
 }
