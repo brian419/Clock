@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C934B8E294BFC16005FEE8B /* SetClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C934B8D294BFC16005FEE8B /* SetClock.swift */; };
 		1CF686502943693E002E519D /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6864F2943693E002E519D /* ClockApp.swift */; };
 		1CF686522943693E002E519D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF686512943693E002E519D /* ContentView.swift */; };
 		1CF6865429436945002E519D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6865329436945002E519D /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C934B8D294BFC16005FEE8B /* SetClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetClock.swift; sourceTree = "<group>"; };
 		1CF6864C2943693E002E519D /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6864F2943693E002E519D /* ClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockApp.swift; sourceTree = "<group>"; };
 		1CF686512943693E002E519D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				1CF6864F2943693E002E519D /* ClockApp.swift */,
 				1CF686512943693E002E519D /* ContentView.swift */,
 				1CF6865D294373F0002E519D /* ClockView.swift */,
+				1C934B8D294BFC16005FEE8B /* SetClock.swift */,
 				1CF6865329436945002E519D /* Assets.xcassets */,
 				1CF6865529436945002E519D /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CF686522943693E002E519D /* ContentView.swift in Sources */,
+				1C934B8E294BFC16005FEE8B /* SetClock.swift in Sources */,
 				1CF6865E294373F0002E519D /* ClockView.swift in Sources */,
 				1CF686502943693E002E519D /* ClockApp.swift in Sources */,
 			);

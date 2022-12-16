@@ -19,11 +19,17 @@ struct ClockView: View {
                     EmptyView()
                 }
                 .opacity(0)
+                NavigationLink(destination: SetClockView().navigationBarBackButtonHidden(), tag: 3, selection: $action) {
+                    EmptyView()
+                }
+                .opacity(0)
                 Spacer()
                 Text("Press Add to add a new alarm!")
                 List {
                     ForEach(items, id: \.self) { item in
-                        Text("Row \(item)")
+                        Button("Row \(item)") {
+                            self.action = 3
+                        }
                     }
 //                    .padding()
 //                    .listRowBackground(Color.black)
