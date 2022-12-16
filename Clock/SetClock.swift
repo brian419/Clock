@@ -24,6 +24,7 @@ struct SetClockView: View {
                         self.action = 4
                     }
                     
+                    
                 }
             }
             .toolbar {
@@ -31,6 +32,7 @@ struct SetClockView: View {
                     Button("Save") {
                         //placeholder
                     }
+                    
                 }
             }
             

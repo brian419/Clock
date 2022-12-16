@@ -12,13 +12,16 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 NavigationLink(destination: ClockView(counter: 0).navigationBarBackButtonHidden(), tag: 1, selection: $action) {
                     EmptyView()
                 }
                     .opacity(0)
                 Spacer()
+                Image(systemName: "clock")
+                    .padding()
+                    .font(.custom("Times",size: 100))
                 Text("Welcome to Clock")
-                    .font(.custom("Times", size: 35))
                     .foregroundColor(.black)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
@@ -29,7 +32,6 @@ struct ContentView: View {
                 }
                 .padding()
                 .foregroundColor(.black)
-                .font(.custom("Times", size: 20))
                 
                 Spacer()
                 

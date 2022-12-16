@@ -24,12 +24,13 @@ struct ClockView: View {
                 }
                 .opacity(0)
                 Spacer()
-                Text("Press Add to add a new alarm!")
+                Text("Press 'Add' to add a new alarm!")
                 List {
                     ForEach(items, id: \.self) { item in
-                        Button("Row \(item)") {
+                        Button("Alarm \(item)") {
                             self.action = 3
                         }
+                        
                     }
 //                    .padding()
 //                    .listRowBackground(Color.black)
@@ -37,6 +38,7 @@ struct ClockView: View {
 //                    .font(.custom( "Times", size: 15))
 //                    .frame(maxWidth: .infinity)
                 }
+                
 
             }
             
@@ -46,7 +48,6 @@ struct ClockView: View {
                     Button("Back") {
                         self.action = 2
                     }
-                    //.foregroundColor(.white)
                 }
             }
             .toolbar {
@@ -54,7 +55,6 @@ struct ClockView: View {
                     Button("Add") {
                         self.items.append(self.items.count + 1)
                     }
-                    //.foregroundColor(.white)
                 }
             }
             
